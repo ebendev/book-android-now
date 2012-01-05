@@ -14,13 +14,12 @@ public class Now extends Activity implements View.OnClickListener {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        setContentView(R.layout.button);
 
-        button = new Button(this);
+        button = (Button)findViewById(R.id.button);
         button.setOnClickListener(this);
 
         updateTime();
-
-        setContentView(button);
     }
 
     public void onClick(View view) {
