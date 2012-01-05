@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import java.util.Date;
 
-public class Now extends Activity implements View.OnClickListener {
+public class Now extends Activity {
     Button button;
     
     /** Called when the activity is first created. */
@@ -17,7 +17,6 @@ public class Now extends Activity implements View.OnClickListener {
         setContentView(R.layout.button);
 
         button = (Button)findViewById(R.id.button);
-        button.setOnClickListener(this);
 
         updateTime();
     }
