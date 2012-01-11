@@ -23,7 +23,7 @@ public class Now extends Activity {
 
     public void onClick(View view) {
         updateTime();
-        setContentView(R.layout.image);
+        setContentView(R.layout.edit);
     }
 
     private void updateTime() {
