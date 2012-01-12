@@ -1,12 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Name:" />
+
+    <EditText android:id="@+id/field"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:singleLine="true" />
+
+    <Button android:id="@+id/button"
+            android:text="Say Hello"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick" />
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="invisible"
+                  android:id="@+id/lowerPanel"
+                  android:orientation="vertical">
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/greetingPanel"
+                      android:orientation="horizontal">
+            <ImageView android:id="@+id/icon"
+                       android:layout_width="wrap_content"
+                       android:layout_height="fill_parent"
+                       android:adjustViewBounds="true"
+                       android:src="@drawable/ic_launcher" />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="fill_parent"
+                      android:gravity="center_vertical"
+                      android:id="@+id/greeting"
+                      android:text="Hello"/>
+        </LinearLayout>
+        <CheckBox android:id="@+id/check"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:checked="true"
+                  android:text="Show Image" />
+        <RadioGroup android:id="@+id/group"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+            <RadioButton android:id="@+id/radioLeft"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:checked="true"
+                         android:text="Left" />
+            <RadioButton android:id="@+id/radioCenter"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Center" />
+            <RadioButton android:id="@+id/radioRight"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Right" />
+        </RadioGroup>
+    </LinearLayout>
 
 </LinearLayout>
