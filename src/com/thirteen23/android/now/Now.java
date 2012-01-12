@@ -3,9 +3,7 @@ package com.thirteen23.android.now;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
+import android.widget.*;
 
 import java.util.Date;
 
@@ -41,6 +39,7 @@ public class Now extends Activity implements CompoundButton.OnCheckedChangeListe
         }
         else {
             checkBox.setText("Unchecked");
+            setContentView(R.layout.radiogroup);
         }
     }
 }
