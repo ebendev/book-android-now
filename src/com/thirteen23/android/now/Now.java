@@ -4,11 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 import java.util.Date;
 
-public class Now extends Activity {
+public class Now extends Activity implements CompoundButton.OnCheckedChangeListener {
     Button button;
+    CheckBox checkBox;
     
     /** Called when the activity is first created. */
     @Override
@@ -23,10 +26,21 @@ public class Now extends Activity {
 
     public void onClick(View view) {
         updateTime();
-        setContentView(R.layout.edit);
+        setContentView(R.layout.checkbox);
+        checkBox = (CheckBox)findViewById(R.id.check);
+        checkBox.setOnCheckedChangeListener(this);
     }
 
     private void updateTime() {
         button.setText(new Date().toString());
+    }
+
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        if (isChecked) {
+            checkBox.setText("Checked");
+        }
+        else {
+            checkBox.setText("Unchecked");
+        }
     }
 }
